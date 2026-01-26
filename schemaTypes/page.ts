@@ -13,6 +13,23 @@ export const page = defineType({
       options: { source: 'title', maxLength: 96 },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+  name: 'sections',
+  title: 'Sections',
+  type: 'array',
+  of: [
+    {type: 'sectionHero'},
+    {type: 'sectionRichText'},
+    {type: 'sectionGallery'},
+    {type: 'sectionSnippet'},
+    {type: 'sectionCta'},
+    {type: 'sectionListings'},
+    {type: 'sectionSocialFeed'},
+    {type: 'sectionLeadForm'},
+  ],
+  validation: (Rule) => Rule.required().min(1),
+}),
+
     defineField({ name: 'seoTitle', title: 'SEO Title', type: 'string' }),
     defineField({ name: 'seoDescription', title: 'SEO Description', type: 'text' }),
     defineField({
