@@ -1,6 +1,6 @@
 import {type SchemaTypeDefinition} from 'sanity'
 
-import {siteSettings} from './siteSettings'
+import siteSettings from './siteSettings'
 import {page} from './page'
 import {testimonial} from './testimonial'
 import {socialPost} from './socialPost'
