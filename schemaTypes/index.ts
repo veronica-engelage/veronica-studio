@@ -36,7 +36,7 @@ import {sectionHero} from './objects/sectionHero'
 import {sectionRichText} from './objects/sectionRichText'
 import {sectionGallery} from './objects/sectionGallery'
 import {sectionSnippet} from './objects/sectionSnippet'
-
+import {sectionTestimonials} from './objects/sectionTestimonials'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   siteSettings,
@@ -75,6 +75,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   sectionRichText,
   sectionGallery,
   sectionSnippet,
+  sectionTestimonials,
 
   // leads
   formDefinition,
