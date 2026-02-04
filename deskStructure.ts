@@ -14,6 +14,7 @@ export const deskStructure = (S: StructureBuilder) =>
               S.listItem()
                 .title('Site Settings')
                 .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+              S.documentTypeListItem('pageSettings').title('Page Settings'),
             ])
         ),
 
@@ -43,8 +44,10 @@ export const deskStructure = (S: StructureBuilder) =>
             .items([
               S.documentTypeListItem('listing').title('Listings'),
               S.documentTypeListItem('listingCollection').title('Listing Collections'),
+              S.documentTypeListItem('market').title('Markets'),
               S.documentTypeListItem('neighborhood').title('Neighborhoods'),
               S.documentTypeListItem('subdivision').title('Subdivisions'),
+              S.documentTypeListItem('marketStatMonthly').title('Market Stats (Monthly)'),
             ])
         ),
 

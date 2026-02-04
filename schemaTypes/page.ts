@@ -27,6 +27,7 @@ export const page = defineType({
     {type: 'sectionSocialFeed'},
     {type: 'sectionLeadForm'},
     {type: 'sectionTestimonials'},
+    {type: 'sectionCommunityCarousel'},
   ],
   validation: (Rule) => Rule.required().min(1),
 }),

@@ -4,9 +4,12 @@ import siteSettings from './siteSettings'
 import {page} from './page'
 import {testimonial} from './testimonial'
 import {socialPost} from './socialPost'
+import {pageSettings} from './pageSettings'
 
 import {neighborhood} from './neighborhood'
 import {subdivision} from './subdivision'
+import {marketStatMonthly} from './marketStatMonthly'
+import {market} from './market'
 
 import {imageAsset} from './imageAsset'
 import {documentAsset} from './documentAsset'
@@ -37,9 +40,11 @@ import {sectionRichText} from './objects/sectionRichText'
 import {sectionGallery} from './objects/sectionGallery'
 import {sectionSnippet} from './objects/sectionSnippet'
 import {sectionTestimonials} from './objects/sectionTestimonials'
+import {sectionCommunityCarousel} from './objects/sectionCommunityCarousel'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   siteSettings,
+  pageSettings,
 
   // objects (register them, no mystery)
   seo,
@@ -49,8 +54,10 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   listingMedia,
 
   // taxonomy
+  market,
   neighborhood,
   subdivision,
+  marketStatMonthly,
 
   // assets
   imageAsset,
@@ -76,6 +83,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   sectionGallery,
   sectionSnippet,
   sectionTestimonials,
+  sectionCommunityCarousel,
 
   // leads
   formDefinition,
