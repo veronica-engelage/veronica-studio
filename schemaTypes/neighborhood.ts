@@ -67,6 +67,86 @@ export const neighborhood = defineType({
       type: 'richContent',
     }),
     defineField({
+      name: 'schools',
+      title: 'Schools',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'schoolEntry',
+          fields: [
+            defineField({name: 'name', title: 'School Name', type: 'string', validation: (Rule) => Rule.required()}),
+            defineField({
+              name: 'level',
+              title: 'Level',
+              type: 'string',
+              options: {
+                list: [
+                  {title: 'Elementary', value: 'Elementary'},
+                  {title: 'Middle', value: 'Middle'},
+                  {title: 'High', value: 'High'},
+                  {title: 'K-8', value: 'K-8'},
+                  {title: 'K-12', value: 'K-12'},
+                ],
+                layout: 'radio',
+              },
+            }),
+            defineField({
+              name: 'type',
+              title: 'Type',
+              type: 'string',
+              options: {
+                list: [
+                  {title: 'Public', value: 'Public'},
+                  {title: 'Charter', value: 'Charter'},
+                  {title: 'Private', value: 'Private'},
+                  {title: 'Magnet', value: 'Magnet'},
+                ],
+                layout: 'radio',
+              },
+            }),
+            defineField({
+              name: 'ratingLabel',
+              title: 'SC Report Card Rating (Label)',
+              type: 'string',
+              description: 'Optional. Example: Excellent, Good, Average.',
+            }),
+            defineField({
+              name: 'ratingValue',
+              title: 'SC Report Card Rating (Value)',
+              type: 'number',
+              description: 'Optional numeric rating if you use it (e.g., 0-100 or 1-5).',
+            }),
+            defineField({
+              name: 'ratingYear',
+              title: 'Rating Year',
+              type: 'string',
+              description: 'Optional. Example: 2023-24.',
+            }),
+            defineField({
+              name: 'sourceUrl',
+              title: 'Source URL',
+              type: 'url',
+              description: 'Link to the official SC Report Cards page for this school.',
+            }),
+            defineField({
+              name: 'qualitativeNote',
+              title: 'Qualitative Note',
+              type: 'string',
+              description: 'Optional. Example: STEM focus, arts-forward, strong athletics.',
+            }),
+          ],
+          preview: {
+            select: {title: 'name', subtitle: 'level'},
+            prepare({title, subtitle}) {
+              return {title: title || 'School', subtitle: subtitle || ''}
+            },
+          },
+        },
+      ],
+      description: 'Optional. Schools mapped to this neighborhood.',
+    }),
+    defineField({
       name: 'amenities',
       title: 'Amenities & Landmarks',
       type: 'array',
