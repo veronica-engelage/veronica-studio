@@ -28,6 +28,7 @@ export const page = defineType({
     {type: 'sectionLeadForm'},
     {type: 'sectionTestimonials'},
     {type: 'sectionCommunityCarousel'},
+    {type: 'sectionIdxWidget'},
   ],
   validation: (Rule) => Rule.required().min(1),
 }),

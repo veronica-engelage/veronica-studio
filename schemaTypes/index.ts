@@ -41,6 +41,7 @@ import {sectionGallery} from './objects/sectionGallery'
 import {sectionSnippet} from './objects/sectionSnippet'
 import {sectionTestimonials} from './objects/sectionTestimonials'
 import {sectionCommunityCarousel} from './objects/sectionCommunityCarousel'
+import {sectionIdxWidget} from './objects/sectionIdxWidget'
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   siteSettings,
@@ -84,6 +85,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   sectionSnippet,
   sectionTestimonials,
   sectionCommunityCarousel,
+  sectionIdxWidget,
 
   // leads
   formDefinition,
